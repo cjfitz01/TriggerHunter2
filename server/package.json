@@ -1,0 +1,14 @@
+{
+  "name": "trigger-hunter-server",
+  "version": "1.0.0",
+  "description": "A server for the Trigger Hunter app that orchestrates cross-device communication and Push Notifications",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Cal Stephens, Komal Hirani, Conor Fitzpatrik",
+  "license": "MIT",
+  "dependencies" : {
+    "apn" : "2.1.5"
+  }
+}
