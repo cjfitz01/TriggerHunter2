@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Trigger Hunter.xcodeproj">
+      location = "self:Trigger Hunter AR.xcodeproj">
    </FileRef>
 </Workspace>

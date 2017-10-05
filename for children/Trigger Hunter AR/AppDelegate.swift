@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  Trigger Hunter
+//  Trigger Hunter AR
 //
 //  Created by Cal Stephens on 10/5/17.
 //  Copyright © 2017 Mobile & Ubiquitous Computing 2017. All rights reserved.
