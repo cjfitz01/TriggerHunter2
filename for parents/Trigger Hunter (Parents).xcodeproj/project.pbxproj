@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		2E6516EF1F866C3E003E8CE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6516EE1F866C3E003E8CE0 /* AppDelegate.swift */; };
-		2E6516F11F866C3E003E8CE0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6516F01F866C3E003E8CE0 /* ViewController.swift */; };
+		2E6516F11F866C3E003E8CE0 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6516F01F866C3E003E8CE0 /* LoginVC.swift */; };
 		2E6516F41F866C3E003E8CE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E6516F21F866C3E003E8CE0 /* Main.storyboard */; };
 		2E6516F61F866C3E003E8CE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E6516F51F866C3E003E8CE0 /* Assets.xcassets */; };
 		2E6516F91F866C3E003E8CE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E6516F71F866C3E003E8CE0 /* LaunchScreen.storyboard */; };
+		E12E1B7E1F86721D0082E35A /* RoomSelectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12E1B7D1F86721D0082E35A /* RoomSelectVC.swift */; };
+		E12E1B801F8672480082E35A /* NewUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12E1B7F1F8672480082E35A /* NewUserVC.swift */; };
+		E12E1B821F8672900082E35A /* CodeDisplayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12E1B811F8672900082E35A /* CodeDisplayVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2E6516EB1F866C3E003E8CE0 /* Trigger Hunter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trigger Hunter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E6516EE1F866C3E003E8CE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2E6516F01F866C3E003E8CE0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2E6516F01F866C3E003E8CE0 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		2E6516F31F866C3E003E8CE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2E6516F51F866C3E003E8CE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2E6516F81F866C3E003E8CE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2E6516FA1F866C3E003E8CE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E12E1B7D1F86721D0082E35A /* RoomSelectVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomSelectVC.swift; sourceTree = "<group>"; };
+		E12E1B7F1F8672480082E35A /* NewUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserVC.swift; sourceTree = "<group>"; };
+		E12E1B811F8672900082E35A /* CodeDisplayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeDisplayVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,25 @@
 		2E6516ED1F866C3E003E8CE0 /* Trigger Hunter */ = {
 			isa = PBXGroup;
 			children = (
+				E12E1B7C1F8671AD0082E35A /* Controllers */,
 				2E6516EE1F866C3E003E8CE0 /* AppDelegate.swift */,
-				2E6516F01F866C3E003E8CE0 /* ViewController.swift */,
 				2E6516F21F866C3E003E8CE0 /* Main.storyboard */,
 				2E6516F51F866C3E003E8CE0 /* Assets.xcassets */,
 				2E6516F71F866C3E003E8CE0 /* LaunchScreen.storyboard */,
 				2E6516FA1F866C3E003E8CE0 /* Info.plist */,
 			);
 			path = "Trigger Hunter";
+			sourceTree = "<group>";
+		};
+		E12E1B7C1F8671AD0082E35A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2E6516F01F866C3E003E8CE0 /* LoginVC.swift */,
+				E12E1B7D1F86721D0082E35A /* RoomSelectVC.swift */,
+				E12E1B7F1F8672480082E35A /* NewUserVC.swift */,
+				E12E1B811F8672900082E35A /* CodeDisplayVC.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -100,7 +117,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2E6516E61F866C3E003E8CE0 /* Build configuration list for PBXProject "Trigger Hunter" */;
+			buildConfigurationList = 2E6516E61F866C3E003E8CE0 /* Build configuration list for PBXProject "Trigger Hunter (Parents)" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -136,8 +153,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E6516F11F866C3E003E8CE0 /* ViewController.swift in Sources */,
+				E12E1B801F8672480082E35A /* NewUserVC.swift in Sources */,
+				2E6516F11F866C3E003E8CE0 /* LoginVC.swift in Sources */,
+				E12E1B7E1F86721D0082E35A /* RoomSelectVC.swift in Sources */,
 				2E6516EF1F866C3E003E8CE0 /* AppDelegate.swift in Sources */,
+				E12E1B821F8672900082E35A /* CodeDisplayVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,7 +321,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2E6516E61F866C3E003E8CE0 /* Build configuration list for PBXProject "Trigger Hunter" */ = {
+		2E6516E61F866C3E003E8CE0 /* Build configuration list for PBXProject "Trigger Hunter (Parents)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2E6516FB1F866C3E003E8CE0 /* Debug */,
