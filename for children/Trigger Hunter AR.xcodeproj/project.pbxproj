@@ -7,27 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2EFF9D801F866BEF00B862D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFF9D7F1F866BEF00B862D4 /* AppDelegate.swift */; };
-		2EFF9D821F866BEF00B862D4 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EFF9D811F866BEF00B862D4 /* art.scnassets */; };
-		2EFF9D841F866BEF00B862D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFF9D831F866BEF00B862D4 /* ViewController.swift */; };
-		2EFF9D871F866BEF00B862D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EFF9D851F866BEF00B862D4 /* Main.storyboard */; };
-		2EFF9D891F866BEF00B862D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EFF9D881F866BEF00B862D4 /* Assets.xcassets */; };
-		2EFF9D8C1F866BEF00B862D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EFF9D8A1F866BEF00B862D4 /* LaunchScreen.storyboard */; };
+		2E6D64251F86724800330A96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6D64241F86724800330A96 /* AppDelegate.swift */; };
+		2E6D64291F86724800330A96 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6D64281F86724800330A96 /* Scene.swift */; };
+		2E6D642B1F86724800330A96 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6D642A1F86724800330A96 /* ViewController.swift */; };
+		2E6D642E1F86724800330A96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E6D642C1F86724800330A96 /* Main.storyboard */; };
+		2E6D64301F86724800330A96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E6D642F1F86724800330A96 /* Assets.xcassets */; };
+		2E6D64331F86724800330A96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E6D64311F86724800330A96 /* LaunchScreen.storyboard */; };
+		2E6D643B1F86748B00330A96 /* Scene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2E6D643A1F86748B00330A96 /* Scene.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2EFF9D7C1F866BEF00B862D4 /* Trigger Hunter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trigger Hunter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2EFF9D7F1F866BEF00B862D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2EFF9D811F866BEF00B862D4 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
-		2EFF9D831F866BEF00B862D4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2EFF9D861F866BEF00B862D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2EFF9D881F866BEF00B862D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		2EFF9D8B1F866BEF00B862D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		2EFF9D8D1F866BEF00B862D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E6D64211F86724800330A96 /* Trigger Hunter AR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trigger Hunter AR.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E6D64241F86724800330A96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2E6D64281F86724800330A96 /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
+		2E6D642A1F86724800330A96 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2E6D642D1F86724800330A96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2E6D642F1F86724800330A96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2E6D64321F86724800330A96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2E6D64341F86724800330A96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E6D643A1F86748B00330A96 /* Scene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Scene.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2EFF9D791F866BEF00B862D4 /* Frameworks */ = {
+		2E6D641E1F86724800330A96 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,73 +39,74 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2EFF9D731F866BEF00B862D4 = {
+		2E6D64181F86724800330A96 = {
 			isa = PBXGroup;
 			children = (
-				2EFF9D7E1F866BEF00B862D4 /* Trigger Hunter */,
-				2EFF9D7D1F866BEF00B862D4 /* Products */,
+				2E6D64231F86724800330A96 /* Trigger Hunter AR */,
+				2E6D64221F86724800330A96 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		2EFF9D7D1F866BEF00B862D4 /* Products */ = {
+		2E6D64221F86724800330A96 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2EFF9D7C1F866BEF00B862D4 /* Trigger Hunter.app */,
+				2E6D64211F86724800330A96 /* Trigger Hunter AR.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2EFF9D7E1F866BEF00B862D4 /* Trigger Hunter */ = {
+		2E6D64231F86724800330A96 /* Trigger Hunter AR */ = {
 			isa = PBXGroup;
 			children = (
-				2EFF9D7F1F866BEF00B862D4 /* AppDelegate.swift */,
-				2EFF9D811F866BEF00B862D4 /* art.scnassets */,
-				2EFF9D831F866BEF00B862D4 /* ViewController.swift */,
-				2EFF9D851F866BEF00B862D4 /* Main.storyboard */,
-				2EFF9D881F866BEF00B862D4 /* Assets.xcassets */,
-				2EFF9D8A1F866BEF00B862D4 /* LaunchScreen.storyboard */,
-				2EFF9D8D1F866BEF00B862D4 /* Info.plist */,
+				2E6D64241F86724800330A96 /* AppDelegate.swift */,
+				2E6D64281F86724800330A96 /* Scene.swift */,
+				2E6D643A1F86748B00330A96 /* Scene.sks */,
+				2E6D642A1F86724800330A96 /* ViewController.swift */,
+				2E6D642C1F86724800330A96 /* Main.storyboard */,
+				2E6D642F1F86724800330A96 /* Assets.xcassets */,
+				2E6D64311F86724800330A96 /* LaunchScreen.storyboard */,
+				2E6D64341F86724800330A96 /* Info.plist */,
 			);
-			path = "Trigger Hunter";
+			path = "Trigger Hunter AR";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2EFF9D7B1F866BEF00B862D4 /* Trigger Hunter */ = {
+		2E6D64201F86724800330A96 /* Trigger Hunter AR */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2EFF9D901F866BEF00B862D4 /* Build configuration list for PBXNativeTarget "Trigger Hunter" */;
+			buildConfigurationList = 2E6D64371F86724800330A96 /* Build configuration list for PBXNativeTarget "Trigger Hunter AR" */;
 			buildPhases = (
-				2EFF9D781F866BEF00B862D4 /* Sources */,
-				2EFF9D791F866BEF00B862D4 /* Frameworks */,
-				2EFF9D7A1F866BEF00B862D4 /* Resources */,
+				2E6D641D1F86724800330A96 /* Sources */,
+				2E6D641E1F86724800330A96 /* Frameworks */,
+				2E6D641F1F86724800330A96 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Trigger Hunter";
-			productName = "Trigger Hunter";
-			productReference = 2EFF9D7C1F866BEF00B862D4 /* Trigger Hunter.app */;
+			name = "Trigger Hunter AR";
+			productName = "Trigger Hunter AR";
+			productReference = 2E6D64211F86724800330A96 /* Trigger Hunter AR.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		2EFF9D741F866BEF00B862D4 /* Project object */ = {
+		2E6D64191F86724800330A96 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0900;
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Mobile & Ubiquitous Computing 2017";
 				TargetAttributes = {
-					2EFF9D7B1F866BEF00B862D4 = {
+					2E6D64201F86724800330A96 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = 2EFF9D771F866BEF00B862D4 /* Build configuration list for PBXProject "Trigger Hunter" */;
+			buildConfigurationList = 2E6D641C1F86724800330A96 /* Build configuration list for PBXProject "Trigger Hunter AR" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -111,55 +114,56 @@
 				en,
 				Base,
 			);
-			mainGroup = 2EFF9D731F866BEF00B862D4;
-			productRefGroup = 2EFF9D7D1F866BEF00B862D4 /* Products */;
+			mainGroup = 2E6D64181F86724800330A96;
+			productRefGroup = 2E6D64221F86724800330A96 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2EFF9D7B1F866BEF00B862D4 /* Trigger Hunter */,
+				2E6D64201F86724800330A96 /* Trigger Hunter AR */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		2EFF9D7A1F866BEF00B862D4 /* Resources */ = {
+		2E6D641F1F86724800330A96 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2EFF9D821F866BEF00B862D4 /* art.scnassets in Resources */,
-				2EFF9D8C1F866BEF00B862D4 /* LaunchScreen.storyboard in Resources */,
-				2EFF9D891F866BEF00B862D4 /* Assets.xcassets in Resources */,
-				2EFF9D871F866BEF00B862D4 /* Main.storyboard in Resources */,
+				2E6D64331F86724800330A96 /* LaunchScreen.storyboard in Resources */,
+				2E6D64301F86724800330A96 /* Assets.xcassets in Resources */,
+				2E6D643B1F86748B00330A96 /* Scene.sks in Resources */,
+				2E6D642E1F86724800330A96 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2EFF9D781F866BEF00B862D4 /* Sources */ = {
+		2E6D641D1F86724800330A96 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2EFF9D841F866BEF00B862D4 /* ViewController.swift in Sources */,
-				2EFF9D801F866BEF00B862D4 /* AppDelegate.swift in Sources */,
+				2E6D642B1F86724800330A96 /* ViewController.swift in Sources */,
+				2E6D64291F86724800330A96 /* Scene.swift in Sources */,
+				2E6D64251F86724800330A96 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		2EFF9D851F866BEF00B862D4 /* Main.storyboard */ = {
+		2E6D642C1F86724800330A96 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				2EFF9D861F866BEF00B862D4 /* Base */,
+				2E6D642D1F86724800330A96 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		2EFF9D8A1F866BEF00B862D4 /* LaunchScreen.storyboard */ = {
+		2E6D64311F86724800330A96 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				2EFF9D8B1F866BEF00B862D4 /* Base */,
+				2E6D64321F86724800330A96 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -167,7 +171,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		2EFF9D8E1F866BEF00B862D4 /* Debug */ = {
+		2E6D64351F86724800330A96 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -224,7 +228,7 @@
 			};
 			name = Debug;
 		};
-		2EFF9D8F1F866BEF00B862D4 /* Release */ = {
+		2E6D64361F86724800330A96 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -274,28 +278,30 @@
 			};
 			name = Release;
 		};
-		2EFF9D911F866BEF00B862D4 /* Debug */ = {
+		2E6D64381F86724800330A96 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Trigger Hunter/Info.plist";
+				DEVELOPMENT_TEAM = FZ89A5SZ7C;
+				INFOPLIST_FILE = "Trigger Hunter AR/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "edu.gatech.triggerhunter.Trigger-Hunter";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.gatech.triggerhunter.Trigger-Hunter-AR";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		2EFF9D921F866BEF00B862D4 /* Release */ = {
+		2E6D64391F86724800330A96 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Trigger Hunter/Info.plist";
+				DEVELOPMENT_TEAM = FZ89A5SZ7C;
+				INFOPLIST_FILE = "Trigger Hunter AR/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "edu.gatech.triggerhunter.Trigger-Hunter";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.gatech.triggerhunter.Trigger-Hunter-AR";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -305,25 +311,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2EFF9D771F866BEF00B862D4 /* Build configuration list for PBXProject "Trigger Hunter" */ = {
+		2E6D641C1F86724800330A96 /* Build configuration list for PBXProject "Trigger Hunter AR" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2EFF9D8E1F866BEF00B862D4 /* Debug */,
-				2EFF9D8F1F866BEF00B862D4 /* Release */,
+				2E6D64351F86724800330A96 /* Debug */,
+				2E6D64361F86724800330A96 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2EFF9D901F866BEF00B862D4 /* Build configuration list for PBXNativeTarget "Trigger Hunter" */ = {
+		2E6D64371F86724800330A96 /* Build configuration list for PBXNativeTarget "Trigger Hunter AR" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2EFF9D911F866BEF00B862D4 /* Debug */,
-				2EFF9D921F866BEF00B862D4 /* Release */,
+				2E6D64381F86724800330A96 /* Debug */,
+				2E6D64391F86724800330A96 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 2EFF9D741F866BEF00B862D4 /* Project object */;
+	rootObject = 2E6D64191F86724800330A96 /* Project object */;
 }
