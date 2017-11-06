@@ -13,6 +13,7 @@ class RoomSelectVC: UIViewController, UICollectionViewDataSource, UICollectionVi
     @IBOutlet weak var mainLabel: UILabel!
     let reuseIdentifier = "roomCell"
     var roomImages : [UIImage] = [UIImage(named:"Outside.png")!, UIImage(named:"Kitchen.png")!, UIImage(named:"Bedroom.png")!, UIImage(named:"Pet.png")!, UIImage(named:"Bathroom.png")!, UIImage(named:"Living_Room.png")!]
+    var roomNames : [String] = ["Outside", "Kitchen", "Bedroom", "Pet", "Bathroom", "Living"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,11 +33,14 @@ class RoomSelectVC: UIViewController, UICollectionViewDataSource, UICollectionVi
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath as IndexPath) as! RoomCollectionViewCell
         cell.image.image = self.roomImages[indexPath.item]
+        cell.room = self.roomNames[indexPath.item]
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("Hello")
+        let cell = collectionView.cellForItem(at: indexPath) as! RoomCollectionViewCell
+        print(cell.room)
+        //print(cell.room)
     }
     
     @IBAction func linkChildDevice(_ sender: Any) {
