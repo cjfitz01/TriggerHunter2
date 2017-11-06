@@ -53,8 +53,18 @@
                                 </cells>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="mv4-hd-ZO9"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="G8g-g3-gYY"/>
                                 </connections>
                             </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a Room" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JNA-Uc-VyI">
+                                <rect key="frame" x="89" y="28" width="142" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="P9O-GK-qTy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Lx-N1-wVY">
                                 <rect key="frame" x="87" y="478" width="154" height="30"/>
                                 <color key="backgroundColor" red="0.76258338972541728" green="0.76824338346703658" blue="0.78307156735751293" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -71,17 +81,11 @@
                                     <action selector="linkChildDevice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NnK-lC-Jzg"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a Room" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JNA-Uc-VyI">
-                                <rect key="frame" x="89" y="28" width="142" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="P9O-GK-qTy"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <accessibility key="accessibilityConfiguration">
+                            <accessibilityTraits key="traits" notEnabled="YES"/>
+                        </accessibility>
                         <constraints>
                             <constraint firstItem="4zZ-aV-GIl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="DBc-Zk-cJ4"/>
                             <constraint firstItem="JNA-Uc-VyI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="89" id="EYB-9K-aI8"/>

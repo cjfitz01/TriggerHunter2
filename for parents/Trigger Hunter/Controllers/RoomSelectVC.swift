@@ -35,17 +35,9 @@ class RoomSelectVC: UIViewController, UICollectionViewDataSource, UICollectionVi
         return cell
     }
     
-    /*func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        // Compute the dimension of a cell for an NxN layout with space S between
-        // cells.  Take the collection view's width, subtract (N-1)*S points for
-        // the spaces between the cells, and then divide by N to find the final
-        // dimension for the cell's width and height.
-        
-        let cellsAcross: CGFloat = 3
-        let spaceBetweenCells: CGFloat = 1
-        let dim = (collectionView.bounds.width - (cellsAcross - 1) * spaceBetweenCells) / cellsAcross
-        return CGSize(width: dim, height: dim)
-    }*/
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("Hello")
+    }
     
     @IBAction func linkChildDevice(_ sender: Any) {
     }
