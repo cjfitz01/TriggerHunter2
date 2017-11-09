@@ -92,7 +92,7 @@ class RoomSelectVC: UIViewController, UICollectionViewDataSource, UICollectionVi
         case .cleaningProduct:
             triggerString = "Smell from Cleaning Product"
         }
-        let alert = UIAlertController(title: "Trigger Sent", message: "The following trigger has been sent to your child's device: \n \(triggerString!)", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Trigger Sent", message: "The following trigger has been sent to your child's device: \n \n \(triggerString!)", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .`default`, handler: { _ in
             //NSLog("The \"OK\" alert occured.")
         }))
