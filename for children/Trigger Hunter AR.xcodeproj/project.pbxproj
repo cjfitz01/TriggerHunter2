@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E0CA1941FB5060F00F8EF37 /* Gotham Rounded Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2E0CA1911FB5060F00F8EF37 /* Gotham Rounded Book.otf */; };
+		2E0CA1951FB5060F00F8EF37 /* Gotham Rounded Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2E0CA1921FB5060F00F8EF37 /* Gotham Rounded Medium.otf */; };
+		2E0CA1961FB5060F00F8EF37 /* Gotham Rounded Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2E0CA1931FB5060F00F8EF37 /* Gotham Rounded Bold.otf */; };
+		2E0CA1981FB507AD00F8EF37 /* TriggerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0CA1971FB507AD00F8EF37 /* TriggerListViewController.swift */; };
 		2E6D64251F86724800330A96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6D64241F86724800330A96 /* AppDelegate.swift */; };
 		2E6D64291F86724800330A96 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6D64281F86724800330A96 /* Scene.swift */; };
 		2E6D642B1F86724800330A96 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6D642A1F86724800330A96 /* ViewController.swift */; };
@@ -18,6 +22,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E0CA1911FB5060F00F8EF37 /* Gotham Rounded Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham Rounded Book.otf"; sourceTree = "<group>"; };
+		2E0CA1921FB5060F00F8EF37 /* Gotham Rounded Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham Rounded Medium.otf"; sourceTree = "<group>"; };
+		2E0CA1931FB5060F00F8EF37 /* Gotham Rounded Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham Rounded Bold.otf"; sourceTree = "<group>"; };
+		2E0CA1971FB507AD00F8EF37 /* TriggerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriggerListViewController.swift; sourceTree = "<group>"; };
 		2E6D64211F86724800330A96 /* Trigger Hunter AR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trigger Hunter AR.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E6D64241F86724800330A96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E6D64281F86724800330A96 /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
@@ -41,6 +49,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E0CA1901FB505F900F8EF37 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				2E0CA1931FB5060F00F8EF37 /* Gotham Rounded Bold.otf */,
+				2E0CA1911FB5060F00F8EF37 /* Gotham Rounded Book.otf */,
+				2E0CA1921FB5060F00F8EF37 /* Gotham Rounded Medium.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		2E0CA1991FB507B600F8EF37 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2E6D642A1F86724800330A96 /* ViewController.swift */,
+				2E0CA1971FB507AD00F8EF37 /* TriggerListViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
 		2E6D64181F86724800330A96 = {
 			isa = PBXGroup;
 			children = (
@@ -60,12 +87,13 @@
 		2E6D64231F86724800330A96 /* Trigger Hunter AR */ = {
 			isa = PBXGroup;
 			children = (
+				2E0CA1991FB507B600F8EF37 /* View Controllers */,
+				2E6D642C1F86724800330A96 /* Main.storyboard */,
 				2E6D64241F86724800330A96 /* AppDelegate.swift */,
 				2E6D64281F86724800330A96 /* Scene.swift */,
 				2E6D643A1F86748B00330A96 /* Scene.sks */,
-				2E6D642A1F86724800330A96 /* ViewController.swift */,
-				2E6D642C1F86724800330A96 /* Main.storyboard */,
 				2E6D642F1F86724800330A96 /* Assets.xcassets */,
+				2E0CA1901FB505F900F8EF37 /* Fonts */,
 				2E6D64311F86724800330A96 /* LaunchScreen.storyboard */,
 				2E6D64341F86724800330A96 /* Info.plist */,
 				2EFF4F371FB4D18000AF4362 /* Trigger.swift */,
@@ -132,9 +160,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E0CA1961FB5060F00F8EF37 /* Gotham Rounded Bold.otf in Resources */,
+				2E0CA1941FB5060F00F8EF37 /* Gotham Rounded Book.otf in Resources */,
 				2E6D64331F86724800330A96 /* LaunchScreen.storyboard in Resources */,
 				2E6D64301F86724800330A96 /* Assets.xcassets in Resources */,
 				2E6D643B1F86748B00330A96 /* Scene.sks in Resources */,
+				2E0CA1951FB5060F00F8EF37 /* Gotham Rounded Medium.otf in Resources */,
 				2E6D642E1F86724800330A96 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,6 +178,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2EFF4F381FB4D18000AF4362 /* Trigger.swift in Sources */,
+				2E0CA1981FB507AD00F8EF37 /* TriggerListViewController.swift in Sources */,
 				2E6D642B1F86724800330A96 /* ViewController.swift in Sources */,
 				2E6D64291F86724800330A96 /* Scene.swift in Sources */,
 				2E6D64251F86724800330A96 /* AppDelegate.swift in Sources */,
