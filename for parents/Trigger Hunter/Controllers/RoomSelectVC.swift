@@ -15,6 +15,12 @@ class RoomSelectVC: UIViewController, UICollectionViewDataSource, UICollectionVi
     var roomImages : [UIImage] = [UIImage(named:"Outside.png")!, UIImage(named:"Kitchen.png")!, UIImage(named:"Bedroom.png")!, UIImage(named:"Pet.png")!, UIImage(named:"Bathroom.png")!, UIImage(named:"Living_Room.png")!]
     var roomNames : [String] = ["Outside", "Kitchen", "Bedroom", "Pet", "Bathroom", "Living"]
     
+    enum Trigger: Int {
+        case pollen = 1, coldWeather, smoke, cockroach, dustMite, mold, petDander, cleaningProduct
+    }
+    
+    var currTrigger : Trigger!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -39,10 +45,59 @@ class RoomSelectVC: UIViewController, UICollectionViewDataSource, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath) as! RoomCollectionViewCell
-        print(cell.room)
-        //print(cell.room)
+
+        if (cell.room == "Outside") {
+            let randomNum = arc4random_uniform(3)+1
+            currTrigger = Trigger(rawValue: Int(randomNum))
+            
+        } else if (cell.room == "Kitchen") {
+            currTrigger = Trigger(rawValue: 4)
+            
+        } else if (cell.room == "Bedroom") {
+            let randomNum = arc4random_uniform(2)+5
+            currTrigger = Trigger(rawValue: Int(randomNum))
+
+        } else if (cell.room == "Pet") {
+            currTrigger = Trigger(rawValue:7)
+            
+        } else if (cell.room == "Bathroom") {
+            currTrigger = Trigger(rawValue: 8)
+            
+        } else if (cell.room == "Living") {
+            let randomNum = arc4random_uniform(2)+5
+            currTrigger = Trigger(rawValue: Int(randomNum))
+            
+        }
+        sendTrigger(trigger: currTrigger)
     }
     
+    func sendTrigger(trigger:Trigger) {
+        var triggerString:String!
+        //make triggerString
+        switch trigger {
+        case .pollen:
+            triggerString = "Pollen"
+        case .coldWeather:
+            triggerString = "Cold Weather"
+        case .smoke:
+            triggerString = "Smoke"
+        case .cockroach:
+            triggerString = "Cockroach"
+        case .dustMite:
+            triggerString = "Dust Mite"
+        case .mold:
+            triggerString = "Mold"
+        case .petDander:
+            triggerString = "Pet Dander"
+        case .cleaningProduct:
+            triggerString = "Smell from Cleaning Product"
+        }
+        let alert = UIAlertController(title: "Trigger Sent", message: "The following trigger has been sent to your child's device: \n \(triggerString!)", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .`default`, handler: { _ in
+            //NSLog("The \"OK\" alert occured.")
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
     @IBAction func linkChildDevice(_ sender: Any) {
     }
     
@@ -53,7 +108,6 @@ class RoomSelectVC: UIViewController, UICollectionViewDataSource, UICollectionVi
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-    }
     */
 
 }
