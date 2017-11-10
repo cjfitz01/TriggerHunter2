@@ -87,6 +87,7 @@
 		2E6D64231F86724800330A96 /* Trigger Hunter AR */ = {
 			isa = PBXGroup;
 			children = (
+				2EFF4F371FB4D18000AF4362 /* Trigger.swift */,
 				2E0CA1991FB507B600F8EF37 /* View Controllers */,
 				2E6D642C1F86724800330A96 /* Main.storyboard */,
 				2E6D64241F86724800330A96 /* AppDelegate.swift */,
@@ -96,7 +97,6 @@
 				2E0CA1901FB505F900F8EF37 /* Fonts */,
 				2E6D64311F86724800330A96 /* LaunchScreen.storyboard */,
 				2E6D64341F86724800330A96 /* Info.plist */,
-				2EFF4F371FB4D18000AF4362 /* Trigger.swift */,
 			);
 			path = "Trigger Hunter AR";
 			sourceTree = "<group>";

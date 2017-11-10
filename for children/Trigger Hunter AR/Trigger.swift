@@ -244,3 +244,34 @@ extension Trigger {
     ]
     
 }
+
+// MARK: Helpers
+
+extension Trigger {
+    
+    var collectionViewImage: UIImage {
+        
+        // plucked from https://stackoverflow.com/questions/2788028/how-do-i-make-uitableviewcells-imageview-a-fixed-size-even-when-the-image-is-sm with a few changes
+        
+        let padding: CGFloat = 15
+        let itemSize = CGSize(width: 100, height: 100)
+        let itemSizeWithPadding = CGSize(width: itemSize.width + padding*2, height: itemSize.height + padding*2)
+        UIGraphicsBeginImageContextWithOptions(itemSizeWithPadding, false, UIScreen.main.scale)
+        
+        let imageRect: CGRect
+        if(image.size.height > image.size.width) {
+            let width = itemSize.height * image.size.width / image.size.height;
+            imageRect = CGRect(x: padding + (itemSize.width - width) / 2, y: padding, width: width, height:itemSize.height)
+        } else {
+            let height = itemSize.width * image.size.height / image.size.width;
+            imageRect = CGRect(x: padding, y: padding + (itemSize.height - height) / 2, width: itemSize.width, height: height)
+        }
+        
+        image.draw(in: imageRect)
+        let squareImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return squareImage!
+    }
+    
+}
+

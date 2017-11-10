@@ -32,8 +32,7 @@ class TriggerListViewController: UITableViewController {
             case .triggers:
                 let trigger = Trigger.all[indexPath.row]
                 cell.textLabel?.text = trigger.name
-                cell.imageView?.image = trigger.image
-                cell.imageView?.contentMode = .scaleAspectFit
+                cell.imageView?.image = trigger.collectionViewImage
             }
         }
     }
