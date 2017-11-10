@@ -12,6 +12,7 @@ import UIKit
 
 struct Trigger {
     let name: String
+    let pluralizedName: String
     let image: UIImage
     let backgroundText: String
     let actionPlan: [String]
@@ -44,6 +45,7 @@ extension Trigger {
     
         Trigger(
             name: "Dust Mite",
+            pluralizedName: "Dust Mites",
             image: #imageLiteral(resourceName: "Dust Mite"),
             backgroundText: "Dust Mites are microscopic bugs related to ticks. They eat dead skin that people shed every day and prefer warm, humid environments. Dust mites live mostly in bedding, stuffed toys, and fabric-covered furniture.",
             actionPlan: [
@@ -77,6 +79,7 @@ extension Trigger {
         
         Trigger(
             name: "Smoke",
+            pluralizedName: "Smoke",
             image: #imageLiteral(resourceName: "Smoke"),
             backgroundText: "Smoke is a common trigger made of small particles and gases. It can come from wood fires, cigarettes, or most materials when burnt. Smoke can also come from burning candles and cooking. Large amounts of smoke inside will slowly go away but the process happens quicker with open doors and windows.",
             actionPlan: [
@@ -111,6 +114,7 @@ extension Trigger {
         
         Trigger(
             name: "Flu Virus",
+            pluralizedName: "the Flu Virus",
             image: #imageLiteral(resourceName: "Flu Virus"),
             backgroundText: "The flu and similar viruses can lead to asthma attacks. The flu is very contagious and most common at the start of school and around the holidays.",
             actionPlan: [
@@ -144,6 +148,7 @@ extension Trigger {
         
         Trigger(
             name: "Mold",
+            pluralizedName: "Mold",
             image: #imageLiteral(resourceName: "Mold"),
             backgroundText: "Mold can cause asthma attacks when the spores are breathed in. It grows most commonly on old food and dead plants. Mold can also grow in dark, damp, warm places. ",
             actionPlan: [
@@ -178,6 +183,7 @@ extension Trigger {
         
         Trigger(
             name: "Pets",
+            pluralizedName: "Pets",
             image: #imageLiteral(resourceName: "Pets"),
             backgroundText: "Pets, like cats and dogs, and other animals can lead to an asthma attack. Their skin, also called dander, and sometimes fur and feathers can irritate your lungs and make breathing difficult. Shaving pets is not effective to prevent an asthma attack since the skin is the primary cause.",
             actionPlan: [
@@ -211,6 +217,7 @@ extension Trigger {
         
         Trigger(
             name: "Pollen",
+            pluralizedName: "Pollen",
             image: #imageLiteral(resourceName: "Pollen"),
             backgroundText: "Pollen a small particle found in the air that comes from plants. It is found in grass, weeds, trees, and flowers. Pollen is released by plants throughout the spring and summer. Thunderstorms and lots of wind will release more pollen into the air. Many people are allergic to pollen, but not everyone.",
             actionPlan: [
@@ -244,34 +251,3 @@ extension Trigger {
     ]
     
 }
-
-// MARK: Helpers
-
-extension Trigger {
-    
-    var collectionViewImage: UIImage {
-        
-        // plucked from https://stackoverflow.com/questions/2788028/how-do-i-make-uitableviewcells-imageview-a-fixed-size-even-when-the-image-is-sm with a few changes
-        
-        let padding: CGFloat = 15
-        let itemSize = CGSize(width: 100, height: 100)
-        let itemSizeWithPadding = CGSize(width: itemSize.width + padding*2, height: itemSize.height + padding*2)
-        UIGraphicsBeginImageContextWithOptions(itemSizeWithPadding, false, UIScreen.main.scale)
-        
-        let imageRect: CGRect
-        if(image.size.height > image.size.width) {
-            let width = itemSize.height * image.size.width / image.size.height;
-            imageRect = CGRect(x: padding + (itemSize.width - width) / 2, y: padding, width: width, height:itemSize.height)
-        } else {
-            let height = itemSize.width * image.size.height / image.size.width;
-            imageRect = CGRect(x: padding, y: padding + (itemSize.height - height) / 2, width: itemSize.width, height: height)
-        }
-        
-        image.draw(in: imageRect)
-        let squareImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        return squareImage!
-    }
-    
-}
-

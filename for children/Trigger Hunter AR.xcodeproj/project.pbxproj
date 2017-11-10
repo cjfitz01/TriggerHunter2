@@ -11,9 +11,12 @@
 		2E0CA1951FB5060F00F8EF37 /* Gotham Rounded Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2E0CA1921FB5060F00F8EF37 /* Gotham Rounded Medium.otf */; };
 		2E0CA1961FB5060F00F8EF37 /* Gotham Rounded Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2E0CA1931FB5060F00F8EF37 /* Gotham Rounded Bold.otf */; };
 		2E0CA1981FB507AD00F8EF37 /* TriggerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0CA1971FB507AD00F8EF37 /* TriggerListViewController.swift */; };
+		2E0CA19B1FB55DC400F8EF37 /* TriggerNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0CA19A1FB55DC400F8EF37 /* TriggerNameViewController.swift */; };
+		2E0CA19F1FB55E7F00F8EF37 /* UIStoryboard+Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0CA19E1FB55E7F00F8EF37 /* UIStoryboard+Main.swift */; };
+		2E0CA1A31FB5621500F8EF37 /* TriggerInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0CA1A21FB5621500F8EF37 /* TriggerInfoViewController.swift */; };
 		2E6D64251F86724800330A96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6D64241F86724800330A96 /* AppDelegate.swift */; };
 		2E6D64291F86724800330A96 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6D64281F86724800330A96 /* Scene.swift */; };
-		2E6D642B1F86724800330A96 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6D642A1F86724800330A96 /* ViewController.swift */; };
+		2E6D642B1F86724800330A96 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6D642A1F86724800330A96 /* ARViewController.swift */; };
 		2E6D642E1F86724800330A96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E6D642C1F86724800330A96 /* Main.storyboard */; };
 		2E6D64301F86724800330A96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E6D642F1F86724800330A96 /* Assets.xcassets */; };
 		2E6D64331F86724800330A96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E6D64311F86724800330A96 /* LaunchScreen.storyboard */; };
@@ -26,10 +29,13 @@
 		2E0CA1921FB5060F00F8EF37 /* Gotham Rounded Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham Rounded Medium.otf"; sourceTree = "<group>"; };
 		2E0CA1931FB5060F00F8EF37 /* Gotham Rounded Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham Rounded Bold.otf"; sourceTree = "<group>"; };
 		2E0CA1971FB507AD00F8EF37 /* TriggerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriggerListViewController.swift; sourceTree = "<group>"; };
+		2E0CA19A1FB55DC400F8EF37 /* TriggerNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriggerNameViewController.swift; sourceTree = "<group>"; };
+		2E0CA19E1FB55E7F00F8EF37 /* UIStoryboard+Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Main.swift"; sourceTree = "<group>"; };
+		2E0CA1A21FB5621500F8EF37 /* TriggerInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriggerInfoViewController.swift; sourceTree = "<group>"; };
 		2E6D64211F86724800330A96 /* Trigger Hunter AR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trigger Hunter AR.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E6D64241F86724800330A96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E6D64281F86724800330A96 /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
-		2E6D642A1F86724800330A96 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2E6D642A1F86724800330A96 /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 		2E6D642D1F86724800330A96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2E6D642F1F86724800330A96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2E6D64321F86724800330A96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -62,10 +68,20 @@
 		2E0CA1991FB507B600F8EF37 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				2E6D642A1F86724800330A96 /* ViewController.swift */,
 				2E0CA1971FB507AD00F8EF37 /* TriggerListViewController.swift */,
+				2E6D642A1F86724800330A96 /* ARViewController.swift */,
+				2E0CA19A1FB55DC400F8EF37 /* TriggerNameViewController.swift */,
+				2E0CA1A21FB5621500F8EF37 /* TriggerInfoViewController.swift */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		2E0CA19D1FB55E7200F8EF37 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2E0CA19E1FB55E7F00F8EF37 /* UIStoryboard+Main.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		2E6D64181F86724800330A96 = {
@@ -89,6 +105,7 @@
 			children = (
 				2EFF4F371FB4D18000AF4362 /* Trigger.swift */,
 				2E0CA1991FB507B600F8EF37 /* View Controllers */,
+				2E0CA19D1FB55E7200F8EF37 /* Helpers */,
 				2E6D642C1F86724800330A96 /* Main.storyboard */,
 				2E6D64241F86724800330A96 /* AppDelegate.swift */,
 				2E6D64281F86724800330A96 /* Scene.swift */,
@@ -179,8 +196,11 @@
 			files = (
 				2EFF4F381FB4D18000AF4362 /* Trigger.swift in Sources */,
 				2E0CA1981FB507AD00F8EF37 /* TriggerListViewController.swift in Sources */,
-				2E6D642B1F86724800330A96 /* ViewController.swift in Sources */,
+				2E6D642B1F86724800330A96 /* ARViewController.swift in Sources */,
+				2E0CA1A31FB5621500F8EF37 /* TriggerInfoViewController.swift in Sources */,
+				2E0CA19F1FB55E7F00F8EF37 /* UIStoryboard+Main.swift in Sources */,
 				2E6D64291F86724800330A96 /* Scene.swift in Sources */,
+				2E0CA19B1FB55DC400F8EF37 /* TriggerNameViewController.swift in Sources */,
 				2E6D64251F86724800330A96 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
