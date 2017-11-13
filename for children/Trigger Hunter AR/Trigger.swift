@@ -182,8 +182,8 @@ extension Trigger {
                 ])),
         
         Trigger(
-            name: "Pets",
-            pluralizedName: "Pets",
+            name: "Pet Dander",
+            pluralizedName: "Pet Dander",
             image: #imageLiteral(resourceName: "Pets"),
             backgroundText: "Pets, like cats and dogs, and other animals can lead to an asthma attack. Their skin, also called dander, and sometimes fur and feathers can irritate your lungs and make breathing difficult. Shaving pets is not effective to prevent an asthma attack since the skin is the primary cause.",
             actionPlan: [

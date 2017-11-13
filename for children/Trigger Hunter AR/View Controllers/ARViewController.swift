@@ -82,17 +82,15 @@ class ARViewController: UIViewController {
         overlayContentViewController = TriggerNameViewController.create(for: trigger)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {
-            self.overlayContentViewController = TriggerInfoViewController.create(for: self.trigger, didTapNextBlock: {
-                self.dismiss(animated: true, completion: nil)
-            })
+            let triggerInfo = TriggerInfoViewController.create(for: self.trigger)
+            triggerInfo.delegate = self
+            self.overlayContentViewController = triggerInfo
         }
     }
     
-    
-    
 }
 
-// MARK: - ARSCNViewDelegate
+// MARK: ARSCNViewDelegate
 
 extension ARViewController: ARSKViewDelegate {
     
@@ -113,3 +111,26 @@ extension ARViewController: ARSKViewDelegate {
     
 }
 
+// MARK: TriggerInfoViewControllerDelegate
+
+extension ARViewController: TriggerInfoViewControllerDelegate {
+    
+    func didTapNextButton() {
+        guard let firstQuestion = trigger.quiz.questions.first else {
+            return
+        }
+        
+        let questionViewController = QuizQuestionViewController.create(for: firstQuestion)
+        questionViewController.delegate = self
+        overlayContentViewController = questionViewController
+    }
+    
+}
+
+// MARK: QuizQuestionViewControllerDelegate
+
+extension ARViewController: QuizQuestionViewControllerDelegate {
+    
+    
+    
+}

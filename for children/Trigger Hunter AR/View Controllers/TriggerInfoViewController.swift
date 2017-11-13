@@ -8,6 +8,13 @@
 
 import UIKit
 
+// MARK: TriggerInfoViewControllerDelegate
+
+protocol TriggerInfoViewControllerDelegate: class {
+    func didTapNextButton()
+}
+
+// MARK: TriggerInfoViewController
 
 class TriggerInfoViewController: UIViewController {
     
@@ -16,16 +23,12 @@ class TriggerInfoViewController: UIViewController {
     @IBOutlet weak var textView: UITextView!
     
     var trigger: Trigger!
-    var didTapNextBlock: (() -> Void)?
+    weak var delegate: TriggerInfoViewControllerDelegate?
     
     // MARK: Setup
     
-    static func create(
-        for trigger: Trigger,
-        didTapNextBlock: @escaping () -> Void) -> TriggerInfoViewController
-    {
+    static func create(for trigger: Trigger) -> TriggerInfoViewController {
         let viewController = UIStoryboard.main.instantiateViewController(withIdentifier: "Trigger Info") as! TriggerInfoViewController
-        viewController.didTapNextBlock = didTapNextBlock
         viewController.trigger = trigger
         return viewController
     }
@@ -41,7 +44,7 @@ class TriggerInfoViewController: UIViewController {
     // MARK: User Interaction
     
     @IBAction func userDidTapNextButton() {
-        didTapNextBlock?()
+        delegate?.didTapNextButton()
     }
     
 }
