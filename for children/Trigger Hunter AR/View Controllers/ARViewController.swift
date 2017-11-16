@@ -88,6 +88,12 @@ class ARViewController: UIViewController {
         }
     }
     
+    func showQuiz(for question: Question) {
+        let questionViewController = QuizQuestionViewController.create(for: question)
+        questionViewController.delegate = self
+        overlayContentViewController = questionViewController
+    }
+    
 }
 
 // MARK: ARSCNViewDelegate
@@ -120,9 +126,7 @@ extension ARViewController: TriggerInfoViewControllerDelegate {
             return
         }
         
-        let questionViewController = QuizQuestionViewController.create(for: firstQuestion)
-        questionViewController.delegate = self
-        overlayContentViewController = questionViewController
+        showQuiz(for: firstQuestion)
     }
     
 }
@@ -131,6 +135,12 @@ extension ARViewController: TriggerInfoViewControllerDelegate {
 
 extension ARViewController: QuizQuestionViewControllerDelegate {
     
-    
+    func userDidCompleteQuizQuestion(_ currentQuestion: Question) {
+        if let nextQuestion = trigger.quiz.question(after: currentQuestion) {
+            showQuiz(for: nextQuestion)
+        } else {
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
     
 }

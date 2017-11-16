@@ -11,7 +11,7 @@ import UIKit
 // MARK: QuizQuestionViewControllerDelegate
 
 protocol QuizQuestionViewControllerDelegate: class {
-    
+    func userDidCompleteQuizQuestion(_ question: Question)
 }
 
 // MARK: QuizQuestionViewController
@@ -29,6 +29,8 @@ class QuizQuestionViewController: UIViewController {
     @IBOutlet weak var answerTwoLabel: UILabel!
     @IBOutlet weak var answerThreeLabel: UILabel!
     @IBOutlet weak var answerFourLabel: UILabel!
+    
+    @IBOutlet weak var answerContainerView: UIView!
     
     private func answerView(at index: Int) -> (background: UIView, label: UILabel)? {
         switch index {
@@ -105,7 +107,54 @@ class QuizQuestionViewController: UIViewController {
     }
     
     func userDidTapAnswer(at index: Int) {
-        print(index)
+        if index == correctAnswerIndex {
+            userSelectedCorrectIndex()
+        } else {
+            userSelectedIncorrectIndex(index)
+        }
+    }
+    
+    func userSelectedCorrectIndex() {
+        guard let correctAnswerIndex = correctAnswerIndex,
+            let (answerView, answerLabel) = answerView(at: correctAnswerIndex) else
+        {
+            return
+        }
+        
+        let coverView = UILabel()
+        coverView.backgroundColor = #colorLiteral(red: 1, green: 0.9214509108, blue: 0.7324421651, alpha: 1)
+        coverView.font = answerLabel.font.withSize(30)
+        coverView.text = "Correct!"
+        coverView.textAlignment = .center
+        
+        answerContainerView.addSubview(coverView)
+        coverView.frame = answerContainerView.convert(answerView.bounds, from: answerView)
+        coverView.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+        
+        UIView.animate(
+            withDuration: 0.5,
+            delay: 0.0,
+            usingSpringWithDamping: 0.85,
+            initialSpringVelocity: 1.0,
+            options: [],
+            animations: {
+                coverView.transform = CGAffineTransform(scaleX: 1.01, y: 1.01)
+                coverView.frame = self.answerContainerView.bounds
+        })
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1) + .milliseconds(500), execute: {
+            self.delegate?.userDidCompleteQuizQuestion(self.question)
+        })
+    }
+    
+    func userSelectedIncorrectIndex(_ index: Int) {
+        guard let (answerView, _) = answerView(at: index) else {
+            return
+        }
+        
+        UIView.animate(withDuration: 0.3, animations: {
+            answerView.alpha = 0.4
+        })
     }
     
 }

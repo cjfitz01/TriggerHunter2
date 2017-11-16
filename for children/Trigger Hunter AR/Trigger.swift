@@ -25,15 +25,34 @@ struct Quiz {
     init(_ questions: [Question]) {
         self.questions = questions
     }
+    
+    func question(after currentQuestion: Question?) -> Question? {
+        guard let currentQuestion = currentQuestion else {
+            return questions.first
+        }
+        
+        if let currentIndex = questions.index(of: currentQuestion),
+            currentIndex != questions.count - 1
+        {
+            return questions[currentIndex + 1]
+        }
+        
+        return nil
+    }
 }
 
-struct Question {
+struct Question: Equatable {
     let text: String
     let correctAnswer: String
     let incorrectAnswers: [String]
     
     var allAnswers: [String] {
         return [correctAnswer] + incorrectAnswers
+    }
+    
+    static func ==(lhs: Question, rhs: Question) -> Bool {
+        return lhs.text == rhs.text
+            && lhs.allAnswers == rhs.allAnswers
     }
 }
 
@@ -211,7 +230,7 @@ extension Trigger {
                     correctAnswer: "Vacuum regularly",
                     incorrectAnswers: [
                         "Let the pet sleep in your bed",
-                        "Vacuum regularly",
+                        "Ignore the pet",
                         "Use the pet as a pillow"])
                 ])),
         
