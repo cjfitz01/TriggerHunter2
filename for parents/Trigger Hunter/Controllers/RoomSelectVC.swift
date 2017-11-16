@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RoomSelectVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class RoomSelectVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     @IBOutlet weak var mainLabel: UILabel!
     let reuseIdentifier = "roomCell"
@@ -41,6 +41,15 @@ class RoomSelectVC: UIViewController, UICollectionViewDataSource, UICollectionVi
         cell.image.image = self.roomImages[indexPath.item]
         cell.room = self.roomNames[indexPath.item]
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        //let cell = collectionView.cellForItem(at: indexPath) as! RoomCollectionViewCell
+        let height = collectionView.frame.height
+        let width = collectionView.frame.width
+        return CGSize(width: width * 0.47 , height: height * 0.37)
+        //let imageSize = model.images[indexPath.row].size
+        //return imageSize
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
