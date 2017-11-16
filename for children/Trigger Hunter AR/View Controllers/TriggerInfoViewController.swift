@@ -41,6 +41,23 @@ class TriggerInfoViewController: UIViewController {
         textView.attributedText = trigger.attributedDescription
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        view.layoutIfNeeded()
+        view.transform = CGAffineTransform(translationX: 0, y: view.bounds.height)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        UIView.animate(
+            withDuration: 0.85,
+            delay: 0.0,
+            usingSpringWithDamping: 0.8,
+            initialSpringVelocity: 0.0,
+            options: [],
+            animations: {
+                self.view.transform = .identity
+        })
+    }
+    
     // MARK: User Interaction
     
     @IBAction func userDidTapNextButton() {
