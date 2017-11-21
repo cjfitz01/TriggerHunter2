@@ -45,9 +45,9 @@ class RoomSelectVC: UIViewController, UICollectionViewDataSource, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         //let cell = collectionView.cellForItem(at: indexPath) as! RoomCollectionViewCell
-        let height = collectionView.frame.height
+        //let height = collectionView.frame.height
         let width = collectionView.frame.width
-        return CGSize(width: width * 0.47 , height: height * 0.37)
+        return CGSize(width: width * 0.47 , height: width * 0.47)
         //let imageSize = model.images[indexPath.row].size
         //return imageSize
     }
