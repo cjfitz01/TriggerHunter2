@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4zZ-aV-GIl">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="288" placeholderIntrinsicHeight="383" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4zZ-aV-GIl">
                                 <rect key="frame" x="16" y="87" width="288" height="383"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="icz-wO-Uar">
@@ -53,7 +53,7 @@
                                 </cells>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="mv4-hd-ZO9"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="G8g-g3-gYY"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Lgn-Pu-tEd"/>
                                 </connections>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a Room" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JNA-Uc-VyI">
@@ -66,7 +66,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Lx-N1-wVY">
-                                <rect key="frame" x="87" y="478" width="154" height="30"/>
+                                <rect key="frame" x="83" y="500" width="154" height="30"/>
                                 <color key="backgroundColor" red="0.76258338972541728" green="0.76824338346703658" blue="0.78307156735751293" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <state key="normal" title="Link to Child's Device">
@@ -89,14 +89,14 @@
                         <constraints>
                             <constraint firstItem="4zZ-aV-GIl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="DBc-Zk-cJ4"/>
                             <constraint firstItem="JNA-Uc-VyI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="89" id="EYB-9K-aI8"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5Lx-N1-wVY" secondAttribute="bottom" constant="60" id="JJU-Dj-JPa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5Lx-N1-wVY" secondAttribute="bottom" constant="38" id="JJU-Dj-JPa"/>
                             <constraint firstItem="4zZ-aV-GIl" firstAttribute="top" secondItem="JNA-Uc-VyI" secondAttribute="bottom" constant="38" id="XTU-OU-NAP"/>
-                            <constraint firstItem="5Lx-N1-wVY" firstAttribute="top" secondItem="4zZ-aV-GIl" secondAttribute="bottom" constant="8" symbolic="YES" id="ax4-WI-1bj"/>
+                            <constraint firstItem="5Lx-N1-wVY" firstAttribute="top" secondItem="4zZ-aV-GIl" secondAttribute="bottom" constant="30" id="ax4-WI-1bj"/>
                             <constraint firstItem="JNA-Uc-VyI" firstAttribute="centerX" secondItem="4zZ-aV-GIl" secondAttribute="centerX" id="bwS-sp-6iK"/>
                             <constraint firstItem="JNA-Uc-VyI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="jza-Ln-Dhd"/>
-                            <constraint firstItem="5Lx-N1-wVY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="rxX-Q9-ps6"/>
+                            <constraint firstItem="5Lx-N1-wVY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="83" id="rxX-Q9-ps6"/>
                             <constraint firstItem="4zZ-aV-GIl" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="t0G-go-seb"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5Lx-N1-wVY" secondAttribute="trailing" constant="79" id="x0g-Ba-0eQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5Lx-N1-wVY" secondAttribute="trailing" constant="83" id="x0g-Ba-0eQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
