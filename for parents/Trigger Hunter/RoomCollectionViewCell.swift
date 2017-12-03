@@ -10,6 +10,5 @@ import UIKit
 
 class RoomCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var image: UIImageView!
-    var room: String!
-    
+    var room: Room!
 }
