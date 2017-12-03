@@ -21,6 +21,7 @@
 		2E6D64301F86724800330A96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E6D642F1F86724800330A96 /* Assets.xcassets */; };
 		2E6D64331F86724800330A96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E6D64311F86724800330A96 /* LaunchScreen.storyboard */; };
 		2E6D643B1F86748B00330A96 /* Scene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2E6D643A1F86748B00330A96 /* Scene.sks */; };
+		2E8248E61FD48E8A00EBEED0 /* TriggerNearbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8248E51FD48E8A00EBEED0 /* TriggerNearbyViewController.swift */; };
 		2ED1E7C31FB95BCF004BCBB1 /* QuizQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED1E7C21FB95BCF004BCBB1 /* QuizQuestionViewController.swift */; };
 		2ED1E7C51FB960C1004BCBB1 /* Array+Shuffle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED1E7C41FB960C1004BCBB1 /* Array+Shuffle.swift */; };
 		2EFF4F381FB4D18000AF4362 /* Trigger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFF4F371FB4D18000AF4362 /* Trigger.swift */; };
@@ -43,6 +44,7 @@
 		2E6D64321F86724800330A96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2E6D64341F86724800330A96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E6D643A1F86748B00330A96 /* Scene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Scene.sks; sourceTree = "<group>"; };
+		2E8248E51FD48E8A00EBEED0 /* TriggerNearbyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriggerNearbyViewController.swift; sourceTree = "<group>"; };
 		2ED1E7C21FB95BCF004BCBB1 /* QuizQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizQuestionViewController.swift; sourceTree = "<group>"; };
 		2ED1E7C41FB960C1004BCBB1 /* Array+Shuffle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Shuffle.swift"; sourceTree = "<group>"; };
 		2EFF4F371FB4D18000AF4362 /* Trigger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trigger.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 			children = (
 				2E0CA1971FB507AD00F8EF37 /* TriggerListViewController.swift */,
 				2E6D642A1F86724800330A96 /* ARViewController.swift */,
+				2E8248E51FD48E8A00EBEED0 /* TriggerNearbyViewController.swift */,
 				2E0CA19A1FB55DC400F8EF37 /* TriggerNameViewController.swift */,
 				2E0CA1A21FB5621500F8EF37 /* TriggerInfoViewController.swift */,
 				2ED1E7C21FB95BCF004BCBB1 /* QuizQuestionViewController.swift */,
@@ -210,6 +213,7 @@
 				2E6D64291F86724800330A96 /* Scene.swift in Sources */,
 				2E0CA19B1FB55DC400F8EF37 /* TriggerNameViewController.swift in Sources */,
 				2E6D64251F86724800330A96 /* AppDelegate.swift in Sources */,
+				2E8248E61FD48E8A00EBEED0 /* TriggerNearbyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

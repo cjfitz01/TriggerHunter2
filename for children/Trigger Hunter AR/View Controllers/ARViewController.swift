@@ -17,6 +17,8 @@ class ARViewController: UIViewController {
     @IBOutlet var sceneView: ARSKView!
     var triggerNode: SKNode?
     
+    private var 🚨overrideARTriggerWithImage🚨 = false
+    
     // MARK: Presentation
     
     static func present(over source: UIViewController, for trigger: Trigger) {
@@ -30,6 +32,12 @@ class ARViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         sceneView.delegate = self
+        
+        self.overlayContentViewController = TriggerNearbyViewController.create(for: trigger)
+        
+        let doubleTapGestrureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.viewDoubleTapped))
+        doubleTapGestrureRecognizer.numberOfTapsRequired = 2
+        view.addGestureRecognizer(doubleTapGestrureRecognizer)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -38,10 +46,6 @@ class ARViewController: UIViewController {
         let configuration = ARWorldTrackingConfiguration()
         configuration.planeDetection = .horizontal
         sceneView.session.run(configuration)
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        triggerDidBecomeVisible()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -78,6 +82,32 @@ class ARViewController: UIViewController {
     
     // MARK: User Interaction and event responses
     
+    @objc func viewDoubleTapped() {
+        guard triggerNode == nil else {
+            return
+        }
+        
+        // plane detection is slow on older devices,
+        // so for our demo we want to be able to force the trigger to appear
+        // if it's taking too long
+        🚨overrideARTriggerWithImage🚨 = true
+        
+        let triggerImageView = UIImageView(image: trigger.image)
+        triggerImageView.contentMode = .scaleAspectFill
+        triggerImageView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(triggerImageView)
+        
+        NSLayoutConstraint.activate([
+            triggerImageView.widthAnchor.constraint(equalToConstant: 150),
+            triggerImageView.heightAnchor.constraint(equalToConstant: 150),
+            triggerImageView.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
+            triggerImageView.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor, constant: 170)
+        ])
+        
+        // continue as if the trigger appeared normally
+        triggerDidBecomeVisible()
+    }
+    
     func triggerDidBecomeVisible() {
         overlayContentViewController = TriggerNameViewController.create(for: trigger)
         
@@ -101,7 +131,8 @@ class ARViewController: UIViewController {
 extension ARViewController: ARSKViewDelegate {
     
     func view(_ view: ARSKView, nodeFor anchor: ARAnchor) -> SKNode? {
-        guard anchor is ARPlaneAnchor,
+        guard !🚨overrideARTriggerWithImage🚨,
+            anchor is ARPlaneAnchor,
             self.triggerNode == nil else
         {
             return nil
@@ -111,6 +142,7 @@ extension ARViewController: ARSKViewDelegate {
         let triggerSize = CGSize(width: 150, height: 150)
         let triggerNode = SKSpriteNode(texture: triggerTexture, size: triggerSize)
         self.triggerNode = triggerNode
+        triggerDidBecomeVisible()
         
         return triggerNode
     }

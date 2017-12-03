@@ -122,7 +122,7 @@ class QuizQuestionViewController: UIViewController {
         }
         
         let coverView = UILabel()
-        coverView.backgroundColor = #colorLiteral(red: 1, green: 0.9214509108, blue: 0.7324421651, alpha: 1)
+        coverView.backgroundColor = #colorLiteral(red: 0.8455766034, green: 0.9482150608, blue: 0.8223766533, alpha: 1)
         coverView.font = answerLabel.font.withSize(30)
         coverView.text = "Correct!"
         coverView.textAlignment = .center
@@ -132,13 +132,13 @@ class QuizQuestionViewController: UIViewController {
         coverView.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
         
         UIView.animate(
-            withDuration: 0.5,
+            withDuration: 0.6,
             delay: 0.0,
             usingSpringWithDamping: 0.85,
             initialSpringVelocity: 1.0,
             options: [],
             animations: {
-                coverView.transform = CGAffineTransform(scaleX: 1.01, y: 1.01)
+                coverView.transform = CGAffineTransform(scaleX: 1.02, y: 1.02)
                 coverView.frame = self.answerContainerView.bounds
         })
         
@@ -148,13 +148,26 @@ class QuizQuestionViewController: UIViewController {
     }
     
     func userSelectedIncorrectIndex(_ index: Int) {
-        guard let (answerView, _) = answerView(at: index) else {
+        guard let (answerView, answerLabel) = answerView(at: index),
+            answerView.alpha == 1.0 else
+        {
             return
         }
         
         UIView.animate(withDuration: 0.3, animations: {
-            answerView.alpha = 0.4
+            answerView.alpha = 0.3
         })
+        
+        let answerText = answerLabel.text
+        answerLabel.text = "Incorrect"
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
+            UIView.transition(with: answerLabel, duration: 0.5, options: [.transitionCrossDissolve], animations: {
+                answerLabel.text = answerText
+            })
+            
+        })
+        
     }
     
 }

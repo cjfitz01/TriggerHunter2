@@ -13,7 +13,6 @@ class TriggerNameViewController: UIViewController {
     var trigger: Trigger!
     
     @IBOutlet weak var textLabel: UILabel!
-    @IBOutlet weak var 🔥TEMPORARY_TRIGGER_IMAGE_FORGIVE_ME_FOR_I_HAVE_SINNEND🔥: UIImageView!
     
     
     // MARK: Setup
@@ -26,7 +25,6 @@ class TriggerNameViewController: UIViewController {
     
     override func viewDidLoad() {
         textLabel.text = trigger.name
-        🔥TEMPORARY_TRIGGER_IMAGE_FORGIVE_ME_FOR_I_HAVE_SINNEND🔥.image = trigger.image
     }
     
 }

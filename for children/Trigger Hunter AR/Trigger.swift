@@ -13,6 +13,7 @@ import UIKit
 struct Trigger {
     let name: String
     let pluralizedName: String
+    let subjectName: String
     let image: UIImage
     let backgroundText: String
     let actionPlan: [String]
@@ -65,6 +66,7 @@ extension Trigger {
         Trigger(
             name: "Dust Mite",
             pluralizedName: "Dust Mites",
+            subjectName: "a dust mite",
             image: #imageLiteral(resourceName: "Dust Mite"),
             backgroundText: "Dust Mites are microscopic bugs related to ticks. They eat dead skin that people shed every day and prefer warm, humid environments. Dust mites live mostly in bedding, stuffed toys, and fabric-covered furniture.",
             actionPlan: [
@@ -99,6 +101,7 @@ extension Trigger {
         Trigger(
             name: "Smoke",
             pluralizedName: "Smoke",
+            subjectName: "smoke",
             image: #imageLiteral(resourceName: "Smoke"),
             backgroundText: "Smoke is a common trigger made of small particles and gases. It can come from wood fires, cigarettes, or most materials when burnt. Smoke can also come from burning candles and cooking. Large amounts of smoke inside will slowly go away but the process happens quicker with open doors and windows.",
             actionPlan: [
@@ -134,6 +137,7 @@ extension Trigger {
         Trigger(
             name: "Flu Virus",
             pluralizedName: "the Flu Virus",
+            subjectName: "a flu virus",
             image: #imageLiteral(resourceName: "Flu Virus"),
             backgroundText: "The flu and similar viruses can lead to asthma attacks. The flu is very contagious and most common at the start of school and around the holidays.",
             actionPlan: [
@@ -168,6 +172,7 @@ extension Trigger {
         Trigger(
             name: "Mold",
             pluralizedName: "Mold",
+            subjectName: "mold",
             image: #imageLiteral(resourceName: "Mold"),
             backgroundText: "Mold can cause asthma attacks when the spores are breathed in. It grows most commonly on old food and dead plants. Mold can also grow in dark, damp, warm places. ",
             actionPlan: [
@@ -203,6 +208,7 @@ extension Trigger {
         Trigger(
             name: "Pet Dander",
             pluralizedName: "Pet Dander",
+            subjectName: "pet dander",
             image: #imageLiteral(resourceName: "Pets"),
             backgroundText: "Pets, like cats and dogs, and other animals can lead to an asthma attack. Their skin, also called dander, and sometimes fur and feathers can irritate your lungs and make breathing difficult. Shaving pets is not effective to prevent an asthma attack since the skin is the primary cause.",
             actionPlan: [
@@ -237,6 +243,7 @@ extension Trigger {
         Trigger(
             name: "Pollen",
             pluralizedName: "Pollen",
+            subjectName: "pollen",
             image: #imageLiteral(resourceName: "Pollen"),
             backgroundText: "Pollen a small particle found in the air that comes from plants. It is found in grass, weeds, trees, and flowers. Pollen is released by plants throughout the spring and summer. Thunderstorms and lots of wind will release more pollen into the air. Many people are allergic to pollen, but not everyone.",
             actionPlan: [
