@@ -8,7 +8,13 @@
   },
   "author": "Cal Stephens, Komal Hirani, Conor Fitzpatrik",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/cjfitz01/TriggerHunter2.git"
+  },
   "dependencies" : {
-    "apn" : "2.1.5"
+    "apn" : "2.1.5",
+    "express": "^4.7.3",
+    "body-parser": "^1.17.1"
   }
 }
