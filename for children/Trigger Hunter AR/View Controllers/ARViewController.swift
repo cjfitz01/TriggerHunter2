@@ -12,7 +12,7 @@ import ARKit
 
 class ARViewController: UIViewController {
     
-    var trigger: Trigger!
+    var trigger: Trigger?
     
     @IBOutlet var sceneView: ARSKView!
     var triggerNode: SKNode?
@@ -21,10 +21,10 @@ class ARViewController: UIViewController {
     
     // MARK: Presentation
     
-    static func present(over source: UIViewController, for trigger: Trigger) {
+    static func create(for trigger: Trigger?) -> ARViewController {
         let arController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AR") as! ARViewController
         arController.trigger = trigger
-        source.present(arController, animated: true, completion: nil)
+        return arController
     }
     
     // MARK: Lifecycle
@@ -83,7 +83,7 @@ class ARViewController: UIViewController {
     // MARK: User Interaction and event responses
     
     @objc func viewDoubleTapped() {
-        guard triggerNode == nil else {
+        guard triggerNode == nil, let trigger = trigger else {
             return
         }
         
@@ -109,10 +109,11 @@ class ARViewController: UIViewController {
     }
     
     func triggerDidBecomeVisible() {
+        guard let trigger = trigger else { return }
         overlayContentViewController = TriggerNameViewController.create(for: trigger)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {
-            let triggerInfo = TriggerInfoViewController.create(for: self.trigger)
+            let triggerInfo = TriggerInfoViewController.create(for: trigger)
             triggerInfo.delegate = self
             self.overlayContentViewController = triggerInfo
         }
@@ -133,7 +134,8 @@ extension ARViewController: ARSKViewDelegate {
     func view(_ view: ARSKView, nodeFor anchor: ARAnchor) -> SKNode? {
         guard !🚨overrideARTriggerWithImage🚨,
             anchor is ARPlaneAnchor,
-            self.triggerNode == nil else
+            self.triggerNode == nil,
+            let trigger = trigger else
         {
             return nil
         }
@@ -154,7 +156,7 @@ extension ARViewController: ARSKViewDelegate {
 extension ARViewController: TriggerInfoViewControllerDelegate {
     
     func didTapNextButton() {
-        guard let firstQuestion = trigger.quiz.questions.first else {
+        guard let firstQuestion = trigger?.quiz.questions.first else {
             return
         }
         
@@ -168,10 +170,10 @@ extension ARViewController: TriggerInfoViewControllerDelegate {
 extension ARViewController: QuizQuestionViewControllerDelegate {
     
     func userDidCompleteQuizQuestion(_ currentQuestion: Question) {
-        if let nextQuestion = trigger.quiz.question(after: currentQuestion) {
+        if let nextQuestion = trigger?.quiz.question(after: currentQuestion) {
             showQuiz(for: nextQuestion)
         } else {
-            self.dismiss(animated: true, completion: nil)
+            (UIApplication.shared.delegate?.window??.rootViewController = ARViewController.create(for: nil))
         }
     }
     

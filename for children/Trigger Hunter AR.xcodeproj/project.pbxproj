@@ -45,6 +45,7 @@
 		2E6D64341F86724800330A96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E6D643A1F86748B00330A96 /* Scene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Scene.sks; sourceTree = "<group>"; };
 		2E8248E51FD48E8A00EBEED0 /* TriggerNearbyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriggerNearbyViewController.swift; sourceTree = "<group>"; };
+		2E8248E71FD4941C00EBEED0 /* Trigger Hunter AR.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Trigger Hunter AR.entitlements"; sourceTree = "<group>"; };
 		2ED1E7C21FB95BCF004BCBB1 /* QuizQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizQuestionViewController.swift; sourceTree = "<group>"; };
 		2ED1E7C41FB960C1004BCBB1 /* Array+Shuffle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Shuffle.swift"; sourceTree = "<group>"; };
 		2EFF4F371FB4D18000AF4362 /* Trigger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trigger.swift; sourceTree = "<group>"; };
@@ -112,6 +113,7 @@
 		2E6D64231F86724800330A96 /* Trigger Hunter AR */ = {
 			isa = PBXGroup;
 			children = (
+				2E8248E71FD4941C00EBEED0 /* Trigger Hunter AR.entitlements */,
 				2EFF4F371FB4D18000AF4362 /* Trigger.swift */,
 				2E0CA1991FB507B600F8EF37 /* View Controllers */,
 				2E0CA19D1FB55E7200F8EF37 /* Helpers */,
@@ -160,6 +162,11 @@
 					2E6D64201F86724800330A96 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -350,11 +357,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Trigger Hunter AR/Trigger Hunter AR.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FZ89A5SZ7C;
 				INFOPLIST_FILE = "Trigger Hunter AR/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "edu.gatech.triggerhunter.Trigger-Hunter-AR";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.gatech.triggerhunter.Trigger-Hunter-AR.cal-stephens";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -365,11 +373,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Trigger Hunter AR/Trigger Hunter AR.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FZ89A5SZ7C;
 				INFOPLIST_FILE = "Trigger Hunter AR/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "edu.gatech.triggerhunter.Trigger-Hunter-AR";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.gatech.triggerhunter.Trigger-Hunter-AR.cal-stephens";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

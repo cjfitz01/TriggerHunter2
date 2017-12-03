@@ -10,19 +10,23 @@ import UIKit
 
 class TriggerNearbyViewController: UIViewController {
     
-    var trigger: Trigger!
+    var trigger: Trigger?
     @IBOutlet weak var triggerNearbyLabel: UILabel!
     
     // MARK: Setup
     
-    static func create(for trigger: Trigger) -> TriggerNearbyViewController {
+    static func create(for trigger: Trigger?) -> TriggerNearbyViewController {
         let viewController = UIStoryboard.main.instantiateViewController(withIdentifier: "Trigger Nearby") as! TriggerNearbyViewController
         viewController.trigger = trigger
         return viewController
     }
     
     override func viewDidLoad() {
-        triggerNearbyLabel.text = "There's \(trigger.subjectName) somewhere nearby..."
+        if let trigger = trigger {
+            triggerNearbyLabel.text = "There's \(trigger.subjectName) somewhere nearby..."
+        } else {
+            triggerNearbyLabel.text = "No trigger nearby"
+        }
     }
     
 }

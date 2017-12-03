@@ -64,7 +64,8 @@ class TriggerListViewController: UITableViewController {
             return
         }
 
-        ARViewController.present(over: self, for: Trigger.all[indexPath.row])
+        let arController = ARViewController.create(for: Trigger.all[indexPath.row])
+        self.present(arController, animated: false, completion: nil)
     }
     
 }

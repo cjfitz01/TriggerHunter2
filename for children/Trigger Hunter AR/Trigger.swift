@@ -61,6 +61,10 @@ struct Question: Equatable {
 
 extension Trigger {
     
+    static func named(_ name: String) -> Trigger? {
+        return all.first(where: { $0.name == name })
+    }
+    
     static let all = [
     
         Trigger(
